@@ -1,86 +1,101 @@
-html,
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* body {
-    height: 150%;
-} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-image: linear-gradient(60deg, #fff1eb 0%, #ace0f9 100%);
-    color: #262626;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
 }
 
-#nav {
-    padding: 20px;
-    font-size: 20px;
+html {
+    scroll-behavior: smooth;
 }
 
-a:link {
-    text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a:active {
-    text-decoration: none;
-}
-
-
-/* footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 0px;
-} */
-
-#profile_picture {
-    height: 200px;
-    border-radius: 10%;
-}
-
-.splash {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgb(51, 51, 51);
-    z-index: 200;
-    color: white;
-    text-align: center;
-    line-height: 90vh;
-}
-
-.splash.display-none {
-    position: fixed;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: black;
-    z-index: -10;
-    color: white;
-    text-align: center;
-    line-height: 90vh;
-    transition: all 0.5s;
-}
-
-@keyframes fadeIn {
+/* Custom animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
-    font-size: 35px;
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Gradient text */
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Section spacing */
+section {
+    scroll-margin-top: 80px;
+}
+
+/* Hover effects */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Timeline styles */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 24px;
+    width: 16px;
+    height: 16px;
+    background: #6366f1;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px #6366f1;
 }

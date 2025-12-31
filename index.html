@@ -1,340 +1,524 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikhsan Abdurachman | IT Solution Analyst & Cloud Architect</title>
+    <meta name="description" content="Portfolio and CV of Ikhsan Abdurachman, an experienced IT Solution Analyst specializing in Cloud-Native Architecture, Kubernetes, and DevSecOps.">
+    <meta name="keywords" content="IT Solution Analyst, Cloud Architect, Kubernetes, DevSecOps, Microservices, Docker">
+    <link rel="icon" type="image/x-icon" href="https://static.photos/technology/32x32/1">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Ihsbramn | Ikhsan Abdurachman</title>
-
-    <!-- Meta Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '734360251310172');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=734360251310172&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+<body class="bg-gradient-to-br from-slate-50 via-white to-indigo-50 text-slate-800 antialiased selection:bg-indigo-500 selection:text-white">
 
-<body>
-    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <!-- Navbar Component -->
+    <custom-navbar></custom-navbar>
 
-    <div class="splash">
-        <a class="fade-in hover" href="https://ihsbramn.github.io" style="color:#cacaca;">Welcome</a>
+    <!-- Main Content -->
+    <main class="pt-20">
 
-    </div>
+        <!-- Hero Section -->
+        <section id="about" class="relative py-20 lg:py-32 overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-10">
+                <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-indigo-500 blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-500 blur-3xl"></div>
+            </div>
 
-    <script>
-        const splash = document.querySelector('.splash');
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8 animate-fade-in-up">
+                        <div class="inline-flex items-center px-4 py-2 rounded-full border border-indigo-200 bg-indigo-50 text-indigo-600 text-sm font-medium">
+                            <span class="flex h-2 w-2 rounded-full bg-indigo-600 mr-2 animate-pulse"></span>
+                            Open to new opportunities
+                        </div>
+                        <h1 class="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-tight">
+                            Hi, I'm <span class="gradient-text">Ikhsan Abdurachman</span>
+                        </h1>
+                        <h2 class="text-2xl lg:text-3xl text-slate-600 font-medium">
+                            IT Solution Analyst & Cloud-Native Architecture Expert
+                        </h2>
+                        <p class="text-lg text-slate-600 leading-relaxed max-w-2xl">
+                            As an experienced IT Solution Analyst in Enterprise Architecture, I specialize in designing, implementing, and optimizing cloud-native architecture solutions. I leverage Kubernetes, microservices, and DevSecOps to drive scalability and operational excellence.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-semibold rounded-xl text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/40">
+                                <i data-feather="mail" class="w-5 h-5 mr-2"></i> Get In Touch
+                            </a>
+                            <a href="#experience" class="inline-flex items-center justify-center px-8 py-4 border-2 border-slate-300 text-base font-semibold rounded-xl text-slate-700 bg-white hover:bg-slate-50 hover:border-indigo-300 transition-all">
+                                <i data-feather="briefcase" class="w-5 h-5 mr-2"></i> View Experience
+                            </a>
+                            <a href="https://github.com/ihsbramn" target="_blank" class="inline-flex items-center justify-center px-8 py-4 border-2 border-slate-800 text-base font-semibold rounded-xl text-white bg-slate-800 hover:bg-slate-900 transition-all">
+                                <i data-feather="github" class="w-5 h-5 mr-2"></i> GitHub
+                            </a>
+                        </div>
 
-        document.addEventListener('DOMContentLoaded', (e) => {
-            setTimeout(() => {
-                splash.classList.add('display-none');
-            }, 2000);
-        })
-    </script>
-
-    <div class="container">
-
-
-        <nav class="navbar navbar-expand-lg navbar-light ">
-            <div class="container-fluid">
-                <a class="hover text-start" href="https://ihsbramn.github.io" style="color:#262626;">Ikhsan Abdurachman</a>
-                <!-- <button class="navbar-toggler text-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="https://ihsbramn.github.io">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Project</a>
-            </li>
-            </ul>
-        </div> -->
-                <div class="text-end">
-                    <a class="hover" href="https://www.linkedin.com/in/ihsbramn/" style="color:#262626;" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18px" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                    </svg>
-                    </a>
-                    &nbsp;
-                    <a href="https://github.com/ihsbramn" target="_blank" style="color:#262626; ">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                </svg>
-                    </a>
-                    &nbsp;
-                    <a href="mailto: abdurahmanihsan25gmail.com" target="_blank" style="color:#262626; ">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="23px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M20 18h-2V9.25L12 13L6 9.25V18H4V6h1.2l6.8 4.25L18.8 6H20m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" fill="currentColor"/></svg>
-                    </a>
+                        <div class="pt-6 flex flex-wrap items-center gap-6 text-slate-500">
+                            <a href="https://www.linkedin.com/in/ihsbramn/" target="_blank" class="flex items-center hover:text-indigo-600 transition-colors font-medium">
+                                <i data-feather="linkedin" class="w-5 h-5 mr-1"></i> LinkedIn
+                            </a>
+                            <a href="mailto:ihsbramn.work@gmail.com" class="flex items-center hover:text-indigo-600 transition-colors font-medium">
+                                <i data-feather="mail" class="w-5 h-5 mr-1"></i> ihsbramn.work@gmail.com
+                            </a>
+                            <span class="flex items-center font-medium">
+                                <i data-feather="map-pin" class="w-5 h-5 mr-1"></i> Bandung, Indonesia
+                            </span>
+                        </div>
+                    </div>
+<div class="relative flex justify-center lg:justify-end">
+                        <div class="relative w-72 h-72 lg:w-96 lg:h-96">
+                            <div class="absolute inset-0 bg-indigo-600 rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                            <img src="./assets/profile.jpeg" alt="Ikhsan Abdurachman" class="relative rounded-3xl shadow-2xl object-cover w-full h-full border-4 border-white">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </div>
-    <!-- <div id="nav" class="container" >
-        <div class="row">
-            <div class="col">
-            <a class="hover" href="https://ihsbramn.github.io" style="color:#262626;">Ikhsan Abdurachman | ihsbramn</a>
-            </div>
-            <div class="text-end">
-                <a  class="hover" href="https://www.linkedin.com/in/ihsbramn/" style="color:#262626;" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18px"  fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                        </svg>
-                </a>
-                &nbsp;
-                <a href="https://github.com/ihsbramn"  target="_blank" style="color:#262626; "> 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                    </svg>
-                </a>
-                &nbsp;
-                <a href="mailto: abdurahmanihsan25gmail.com"  target="_blank" style="color:#262626; ">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="23px"  preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M20 18h-2V9.25L12 13L6 9.25V18H4V6h1.2l6.8 4.25L18.8 6H20m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" fill="currentColor"/></svg>
-                </a>
-                </div>
-        </div>
-    </div> -->
+        </section>
 
-    <div class="container" style="margin-top:65px;">
-        <div class="row">
-            <section name="img">
-                <img src="img/pp.png" alt="profile_picture" id="profile_picture">
-            </section>
-        </div>
-        <br>
-        <div class="row">
-
-            <section name="about">
-                <h4>About</h2>
-                    <br>
-                    <p>Personal site of <a style="color:#262626; " href="https://ihsbramn.github.io">Ikhsan Abdurachman.</a><br>"<i> Final year student at <a href="https://telkomuniversity.ac.id/" target="_blank" style="color:#262626; ">Telkom University</a></i>,
-                        taking a Bachelor of Information System. Passionate to learn new things and love to work collaboratively. Interested Web development, project management, and quality assurance.&nbsp;
-                        <a href="mailto: abdurahmanihsan25gmail.com" target="_blank" style="color:#262626; "> <u>Say Hi!</u></a>
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Career Path</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                        Work Experience
                     </p>
-            </section>
-            <br>
-            <br>
-            <section name="resume">
-                <p>P.S: for recruiters, here's my
-                    <a href="https://standardresume.co/r/ihsbramn" target="_blank" style="color:#262626; "> <b>résumé</b> </a>.</p>
-            </section>
-
-
-        </div>
-        <br>
-        <div class="row">
-            <h4>My Work</h4>
-            <br> <br>
-            <div class="d-flex flex-row flex-nowrap overflow-auto">
-                <div class="card card-top card-block mx-2 rounded-3 shadow">
-                    <img src="img/notif web.gif" class="card-img-top img-fluid" style="max-height: 250px;" alt="img">
-                    <div class="card-body">
-                        <h6 class="card-title text-center">
-                            Siparma Dashboard
-                        </h6>
-                    </div>
-                    <div class="card-footer text-center">
-                        <button type="button" class="btn btn-light shadow" data-bs-toggle="modal" data-bs-target="#siparmadash">
-                            Details
-                        </button>
-                    </div>
                 </div>
-                <div class="card card-top card-block mx-2 rounded-3 shadow">
-                    <img src="img/bot.png" class="card-img-top img-fluid" style="max-height: 250px;" alt="img">
-                    <div class="card-body">
-                        <h6 class="card-title text-center">
-                            Siparma Bot
-                        </h6>
+
+                <div class="relative">
+                    <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                        <div class="w-full border-t border-slate-200"></div>
                     </div>
-                    <div class="card-footer text-center">
-                        <button type="button" class="btn btn-light shadow" data-bs-toggle="modal" data-bs-target="#siparmabot">
-                            Details
-                        </button>
+                    <!-- We will use a grid layout instead of a strict vertical line for better responsiveness -->
+                    <div class="relative grid grid-cols-1 gap-8 bg-transparent p-0">
+                        <!-- Job 1 -->
+                        <div class="relative bg-gradient-to-br from-white to-indigo-50 border border-indigo-200 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 card-hover">
+                            <div class="absolute -top-3 -left-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg">
+                                Present
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-900">IT Solution Analyst - Enterprise Architecture Department</h3>
+                                    <p class="text-indigo-600 font-semibold">Allo Bank</p>
+                                    <p class="text-slate-500 text-sm mt-1">Jakarta, Indonesia</p>
+                                </div>
+                                <div class="text-slate-500 mt-2 md:mt-0 flex items-center bg-white px-4 py-2 rounded-lg shadow-sm">
+                                    <i data-feather="calendar" class="w-4 h-4 mr-2 text-indigo-600"></i> Feb 2023 – Present
+                                </div>
+                            </div>
+                            <ul class="list-disc list-outside ml-4 space-y-3 text-slate-600">
+                                <li>Design, implement, and optimize cloud-native architecture solutions leveraging Kubernetes for orchestration and container management to enhance scalability, flexibility, and performance.</li>
+                                <li>Drive the adoption of microservices architecture and containerization to improve deployment efficiency and resource utilization in cloud environments.</li>
+                                <li>Implement, optimize, and manage the software development lifecycle (SDLC), ITSM platform, and DevSecOps tooling systems within the organization, ensuring seamless integration across service management, development, and security processes.</li>
+                                <li>Conduct research, share best practices, and lead initiatives to streamline development and operational processes within the IT Directorate.</li>
+                                <li>Collaborate with cross-functional teams to seamlessly migrate legacy applications to Kubernetes-based environments while ensuring operational integrity.</li>
+                            </ul>
+</div>
+                        <!-- Job 2 -->
+                        <div class="relative bg-white border border-slate-200 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 card-hover">
+                            <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-900">IT Acceleration Program (Allo LEAD)</h3>
+                                    <p class="text-indigo-600 font-semibold">Allo Bank in collaboration with Hacktiv8</p>
+                                    <p class="text-slate-500 text-sm mt-1">Jakarta, Indonesia</p>
+                                </div>
+                                <div class="text-slate-500 mt-2 md:mt-0 flex items-center bg-slate-50 px-4 py-2 rounded-lg">
+                                    <i data-feather="calendar" class="w-4 h-4 mr-2 text-indigo-600"></i> Nov 2022 – Feb 2023
+                                </div>
+                            </div>
+                            <p class="text-slate-600">
+                                Intensive training program focused on banking technology and software development acceleration, providing hands-on experience with modern development practices and tools.
+                            </p>
+</div>
+                        <!-- Job 3 -->
+                        <div class="relative bg-white border border-slate-200 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 card-hover">
+                            <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-900">Access Service Operation Internship</h3>
+                                    <p class="text-indigo-600 font-semibold">Telkom Indonesia</p>
+                                    <p class="text-slate-500 text-sm mt-1">Semarang, Indonesia</p>
+                                </div>
+                                <div class="text-slate-500 mt-2 md:mt-0 flex items-center bg-slate-50 px-4 py-2 rounded-lg">
+                                    <i data-feather="calendar" class="w-4 h-4 mr-2 text-indigo-600"></i> Jun 2021 – Aug 2021
+                                </div>
+                            </div>
+                            <ul class="list-disc list-outside ml-4 space-y-3 text-slate-600">
+                                <li>Web Full stack developer: Developed dashboard website for helpdesk to update customer complaint data using Laravel framework.</li>
+                                <li>Telegram bot developer: Built a chatbot to facilitate field technicians to report customer complaints data to the helpdesk using Python.</li>
+                                <li>Examined and reported field equipment condition (Optical Distribution Point) for maintenance optimization.</li>
+                            </ul>
+</div>
+
                     </div>
                 </div>
             </div>
-            <!-- <div id="carouselExampleCaptions" class="carousel slide shadow rounded-3" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </section>
+
+        <!-- Education Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Academic Background</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                        Education
+                    </p>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/img/notif web.gif" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5 class="text-blacks">Siparma Dashboard</h5>
-                            <p class="text-black"> Dashboard Web Application for helpdesk at Telkom Witel Semarang</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-br from-white to-indigo-50 p-8 rounded-2xl shadow-lg border border-indigo-100 card-hover">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-indigo-100 p-3 rounded-xl">
+                                <i data-feather="book" class="w-8 h-8 text-indigo-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-slate-900">Bachelor of Information System</h3>
+                                <p class="text-indigo-600 font-semibold mt-1">Telkom University</p>
+                                <p class="text-slate-500 mt-2">2018 - 2022</p>
+                                <span class="inline-flex items-center mt-3 px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                                    <i data-feather="award" class="w-4 h-4 mr-1"></i> GPA 3.54 (Cum Laude)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200 card-hover">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-slate-100 p-3 rounded-xl">
+                                <i data-feather="book-open" class="w-8 h-8 text-slate-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-slate-900">Science</h3>
+                                <p class="text-indigo-600 font-semibold mt-1">25 Bandung Senior High School</p>
+                                <p class="text-slate-500 mt-2">2015 - 2018</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Professional Credentials</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                        Certifications
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200 hover:border-indigo-300 hover:shadow-xl transition-all duration-300 card-hover">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-green-100 p-2 rounded-lg">
+                                    <i data-feather="shield" class="w-6 h-6 text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-900">Manajemen Risiko Perbankan Kualifikasi 4</h3>
+                                    <p class="text-sm text-slate-600">Badan Nasional Sertifikasi Profesi</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-3 flex items-center">
+                            <i data-feather="calendar" class="w-3 h-3 mr-1"></i> Feb 2024 – Feb 2027
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200 hover:border-indigo-300 hover:shadow-xl transition-all duration-300 card-hover">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-blue-100 p-2 rounded-lg">
+                                    <i data-feather="check-circle" class="w-6 h-6 text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-900">Jira, JSM & Confluence Fundamentals</h3>
+                                    <p class="text-sm text-slate-600">Atlassian</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-3 flex items-center">
+                            <i data-feather="calendar" class="w-3 h-3 mr-1"></i> Oct 2023
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200 hover:border-indigo-300 hover:shadow-xl transition-all duration-300 card-hover">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-purple-100 p-2 rounded-lg">
+                                    <i data-feather="tool" class="w-6 h-6 text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-900">Jira & JSM Administrator</h3>
+                                    <p class="text-sm text-slate-600">Metro Data Academy</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-3 flex items-center">
+                            <i data-feather="calendar" class="w-3 h-3 mr-1"></i> Sep 2023
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200 hover:border-indigo-300 hover:shadow-xl transition-all duration-300 card-hover">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-orange-100 p-2 rounded-lg">
+                                    <i data-feather="code" class="w-6 h-6 text-orange-600"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-slate-900">Junior Web Developer</h3>
+                                    <p class="text-sm text-slate-600">LSP Informatika BNSP</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-3 flex items-center">
+                            <i data-feather="calendar" class="w-3 h-3 mr-1"></i> Oct 2021 – Jan 2026
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- Skills Section -->
+        <section id="skills" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Expertise</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                        Technical Skills
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Skill 1 -->
+                    <div class="group relative bg-gradient-to-br from-slate-50 to-indigo-50 rounded-2xl p-8 border border-slate-200 hover:border-indigo-400 hover:shadow-2xl transition-all duration-500 card-hover">
+                        <div class="absolute top-6 right-6 text-indigo-600 group-hover:scale-110 transition-transform">
+                            <i data-feather="box" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 group-hover:text-indigo-700 mb-3">Containerization</h3>
+                        <p class="text-slate-600 group-hover:text-slate-700 text-sm leading-relaxed">Kubernetes, Docker, Container orchestration and management</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full">Kubernetes</span>
+                            <span class="px-2 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full">Docker</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Skill 2 -->
+                    <div class="group relative bg-gradient-to-br from-slate-50 to-purple-50 rounded-2xl p-8 border border-slate-200 hover:border-purple-400 hover:shadow-2xl transition-all duration-500 card-hover">
+                        <div class="absolute top-6 right-6 text-purple-600 group-hover:scale-110 transition-transform">
+                            <i data-feather="shield" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 group-hover:text-purple-700 mb-3">DevSecOps</h3>
+                        <p class="text-slate-600 group-hover:text-slate-700 text-sm leading-relaxed">CI/CD pipelines, Security automation, DevSecOps tooling</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">CI/CD</span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">Security</span>
                         </div>
                     </div>
 
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div> -->
-        </div>
-        <br>
-        <div class="row">
-
-            <section name="about">
-                <h4>Git Contribution</h2>
-                    <!-- Prepare a container for your calendar. -->
-                    <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js">
-                    </script>
-
-                    <!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
-                    <link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css" />
-
-                    <!-- Prepare a container for your calendar. -->
-                    <div class="calendar">
-                        <!-- Loading stuff -->
-                        Loading the data just for you.
+                    <!-- Skill 3 -->
+                    <div class="group relative bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 border border-slate-200 hover:border-blue-400 hover:shadow-2xl transition-all duration-500 card-hover">
+                        <div class="absolute top-6 right-6 text-blue-600 group-hover:scale-110 transition-transform">
+                            <i data-feather="settings" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 group-hover:text-blue-700 mb-3">ITSM</h3>
+                        <p class="text-slate-600 group-hover:text-slate-700 text-sm leading-relaxed">Jira Service Management, Service integration & management</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Jira</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">ITSM</span>
+                        </div>
                     </div>
 
-                    <script>
-                        new GitHubCalendar(".calendar", "ihsbramn");
-                    </script>
-            </section>
-
-
-        </div>
-    </div>
-    <br><br><br><br>
-    <footer class="page-footer">
-        <!-- Copyright -->
-        <div class="text-center p-4" style="font-size:12px;">
-            © 2021 Copyright
-            <a style="color:#262626; " href="https://ihsbramn.github.io"> <b> Ikhsan Abdurachman </b> </a> &nbsp; | &nbsp;
-            <a class="hover" href="https://www.instagram.com/ihsbramn/" style="color:#262626;" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="18px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3S645.3 585.4 645.3 512S585.4 378.7 512 378.7zM911.8 512c0-55.2.5-109.9-2.6-165c-3.1-64-17.7-120.8-64.5-167.6c-46.9-46.9-103.6-61.4-167.6-64.5c-55.2-3.1-109.9-2.6-165-2.6c-55.2 0-109.9-.5-165 2.6c-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6c46.9 46.9 103.6 61.4 167.6 64.5c55.2 3.1 109.9 2.6 165 2.6c55.2 0 109.9.5 165-2.6c64-3.1 120.8-17.7 167.6-64.5c46.9-46.9 61.4-103.6 64.5-167.6c3.2-55.1 2.6-109.8 2.6-165zM512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9S717.1 398.5 717.1 512S625.5 717.1 512 717.1zm213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9s47.9 21.4 47.9 47.9a47.84 47.84 0 0 1-47.9 47.9z" fill="currentColor"/></svg>
-            </a>
-            &nbsp;
-            <a class="hover" href="https://www.twitter.com/ihsbramn/" style="color:#262626;" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15px" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                    </svg>
-            </a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    -->
-
-
-    <!-- MODAL -->
-    <!-- Modal -->
-    <div class="modal fade" id="siparmadash" tabindex="-1" aria-labelledby="siparmadashLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg ">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="siparmadashLabel">Siparma Dashboard</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <!-- Skill 4 -->
+                    <div class="group relative bg-gradient-to-br from-slate-50 to-green-50 rounded-2xl p-8 border border-slate-200 hover:border-green-400 hover:shadow-2xl transition-all duration-500 card-hover">
+                        <div class="absolute top-6 right-6 text-green-600 group-hover:scale-110 transition-transform">
+                            <i data-feather="grid" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 group-hover:text-green-700 mb-3">Microservices</h3>
+                        <p class="text-slate-600 group-hover:text-slate-700 text-sm leading-relaxed">Architecture design, API Gateway patterns</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">API Gateway</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">Architecture</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Skill 5 -->
+                    <div class="group relative bg-gradient-to-br from-slate-50 to-orange-50 rounded-2xl p-8 border border-slate-200 hover:border-orange-400 hover:shadow-2xl transition-all duration-500 card-hover">
+                        <div class="absolute top-6 right-6 text-orange-600 group-hover:scale-110 transition-transform">
+                            <i data-feather="cloud" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 group-hover:text-orange-700 mb-3">Cloud-Native</h3>
+                        <p class="text-slate-600 group-hover:text-slate-700 text-sm leading-relaxed">Cloud architecture design & implementation</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Cloud</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Architecture</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Skill 6 -->
+                    <div class="group relative bg-gradient-to-br from-slate-50 to-pink-50 rounded-2xl p-8 border border-slate-200 hover:border-pink-400 hover:shadow-2xl transition-all duration-500 card-hover">
+                        <div class="absolute top-6 right-6 text-pink-600 group-hover:scale-110 transition-transform">
+                            <i data-feather="git-branch" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 group-hover:text-pink-700 mb-3">SDLC</h3>
+                        <p class="text-slate-600 group-hover:text-slate-700 text-sm leading-relaxed">Software Development Lifecycle management</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-pink-100 text-pink-700 text-xs rounded-full">SDLC</span>
+                            <span class="px-2 py-1 bg-pink-100 text-pink-700 text-xs rounded-full">Process</span>
+                        </div>
+                    </div>
+</div>
+            </div>
+        </section>
+        <!-- Publications Section -->
+        <section id="publications" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Research & Publications</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                        Published Work
+                    </p>
                 </div>
-                <div class="modal-body">
-                    <h2 class="text-center">SIParma Dashboard</h2>
-                    <br>
-                    <center>
-                        <img src="img/login dash.gif" class="rounded text-center img-fluid" style="max-height: 300px;" alt="login">
-                    </center>
-                    <br><br>
-                    <P> One of my project i'm working on when internship at Telkom Indonesia Witel Semarang. This web application is built to accommodate helpdesk works when receiving reports from field technician.
-                    </P>
-                    <center>
-                        <img src="img/update reply closed web.gif" class="rounded text-center img-fluid" style="max-height: 300px;" alt="update">
-                    </center>
-                    <br><br>
-                    <P>This project is integrated with Telegram BOT which serves for reporting from field technicians to the helpdesk in Access Service Operation unit at Telkom Witel Semarang </P>
-                    <center>
-                        <img src="img/chart1.jpg" class="rounded text-center img-fluid" style="max-height: 300px;" alt="update">
-                    </center>
-                    <br>
-                    <center>
-                        <img src="img/chart2.jpg" class="rounded text-center img-fluid" style="max-height: 300px;" alt="update">
-                    </center>
-                    <br>
-                    <center>
-                        <img src="img/chart3.jpg" class="rounded text-center img-fluid" style="max-height: 300px;" alt="update">
-                    </center>
-                    <br><br>
-                    <p>This Website also provide performance data for every user that usefull for admin (Supervisor or Manager).</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-200 rounded-2xl p-8 shadow-lg card-hover">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-indigo-600 p-3 rounded-xl">
+                                <i data-feather="file-text" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Smart Tourism Platform for Tourist with Disabilities</h3>
+                                <p class="text-slate-600 mb-4">The Second HISPISI's Vol 2 No 1 (2022): ICHELSS: International Conference on Humanities, Education, Law, and Social Sciences</p>
+                                <a href="https://journal.unj.ac.id/unj/index.php/hispisi/article/view/30999" target="_blank" class="inline-flex items-center px-4 py-2 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-indigo-600 hover:text-white transition-all shadow-md">
+                                    Read Paper <i data-feather="external-link" class="w-4 h-4 ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="modal fade" id="siparmabot" tabindex="-1" aria-labelledby="siparmabotLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg ">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="siparmabotLabel">Siparma Telegram Bot</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Organizations Section -->
+        <section class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Leadership & Community</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                        Organization Experience
+                    </p>
                 </div>
-                <div class="modal-body">
-                    <h2 class="text-center">SIParma Telegram Bot</h2>
-                    <br>
-                    <center>
-                        <img src="img/Input Moban.gif" class="rounded text-center img-fluid" style="max-height: 350px;" alt="login">
-                    </center>
-                    <br><br>
-                    <P> One of my project i'm working on when internship at Telkom Indonesia Witel Semarang. This Telegram Bot is built to accommodate field technician to input data to helpdesk.
-                    </P>
-                    <center>
-                        <img src="img/cek status.gif" class="rounded text-center img-fluid" style="max-height: 350px;" alt="update">
-                    </center>
-                    <br><br>
-                    <P>This project is integrated with Web Application called "SIParma Dashboard" that helpdesk use to resolve the problems that technician input. </P>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200 card-hover">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gradient-to-br from-indigo-500 to-purple-600 p-3 rounded-xl">
+                                <i data-feather="users" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-slate-900">Public Documentation Coordinator</h3>
+                                <p class="text-indigo-600 font-semibold mt-1">Cyan Music</p>
+                                <p class="text-slate-500 mt-2">Jan 2020 - Jan 2021</p>
+                                <p class="text-slate-600 mt-3 text-sm">Responsible for all matters relating to the coordination and work of members under the Public Documentation Division.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-200 card-hover">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-gradient-to-br from-green-500 to-teal-600 p-3 rounded-xl">
+                                <i data-feather="heart" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-slate-900">Volunteering as Marshall</h3>
+                                <p class="text-indigo-600 font-semibold mt-1">Telkom University Run</p>
+                                <p class="text-slate-500 mt-2">Sep 2019 – Oct 2019</p>
+                                <p class="text-slate-600 mt-3 text-sm">Contributed to the successful organization of university running event as a marshall volunteer.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-
-    <!-- MODAL -->
-    
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-900 text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 w-80 h-80 bg-purple-400 rounded-full blur-3xl"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-4">Let's Connect</h2>
+                    <p class="text-indigo-200 text-lg">I'm always open to discussing new opportunities, projects, or ideas.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <a href="mailto:ihsbramn.work@gmail.com" class="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 card-hover">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-indigo-500 p-4 rounded-xl group-hover:scale-110 transition-transform">
+                                <i data-feather="mail" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold">Email</h3>
+                                <p class="text-indigo-200">ihsbramn.work@gmail.com</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/ihsbramn/" target="_blank" class="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 card-hover">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-600 p-4 rounded-xl group-hover:scale-110 transition-transform">
+                                <i data-feather="linkedin" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold">LinkedIn</h3>
+                                <p class="text-indigo-200">linkedin.com/in/ihsbramn</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://github.com/ihsbramn" target="_blank" class="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 card-hover">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-slate-700 p-4 rounded-xl group-hover:scale-110 transition-transform">
+                                <i data-feather="github" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold">GitHub</h3>
+                                <p class="text-indigo-200">github.com/ihsbramn</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <div class="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-green-500 p-4 rounded-xl group-hover:scale-110 transition-transform">
+                                <i data-feather="smartphone" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold">Phone</h3>
+                                <p class="text-indigo-200">+62 878 2509 2663</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <p class="text-indigo-200 mb-4">Or reach out via</p>
+                    <a href="mailto:ihsbramn.work@gmail.com" class="inline-flex items-center px-8 py-4 bg-white text-indigo-900 font-bold rounded-xl hover:bg-indigo-100 transition-all shadow-xl hover:shadow-2xl">
+                        <i data-feather="send" class="w-5 h-5 mr-2"></i> Send Message
+                    </a>
+                </div>
+            </div>
+        </section>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
 </body>
-
 </html>
