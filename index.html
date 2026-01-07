@@ -140,13 +140,25 @@
                             </span>
                         </div>
                     </div>
-                    <div class="relative flex justify-center lg:justify-end">
-                        <div class="relative w-72 h-72 lg:w-96 lg:h-96">
+                    <div class="relative flex justify-center lg:justify-end animate-fade-in-right">
+                        <div class="relative w-72 h-72 lg:w-96 lg:h-96 profile-container">
+                            <!-- Animated background glow -->
                             <div
                                 class="absolute inset-0 bg-indigo-600 rounded-full blur-2xl opacity-20 animate-breathe">
                             </div>
-                            <img src="./assets/profile.jpeg" alt="Ikhsan Abdurachman"
-                                class="relative rounded-3xl shadow-2xl object-cover w-full h-full border-4 border-white">
+
+                            <!-- Rotating gradient border -->
+                            <div class="absolute inset-0 rounded-3xl animate-spin-slow opacity-75">
+                                <div
+                                    class="absolute inset-0 rounded-3xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 blur-sm">
+                                </div>
+                            </div>
+
+                            <!-- Profile image with hover effects -->
+                            <div class="relative profile-image-wrapper animate-float">
+                                <img src="./assets/profile.jpeg" alt="Ikhsan Abdurachman"
+                                    class="relative rounded-3xl shadow-2xl object-cover w-full h-full border-4 border-white profile-image">
+                            </div>
                         </div>
                     </div>
                 </div>

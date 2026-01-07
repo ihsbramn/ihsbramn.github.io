@@ -27,10 +27,12 @@ html {
         opacity: 0;
         transform: translateY(40px) scale(0.95);
     }
+
     60% {
         opacity: 1;
         transform: translateY(-5px) scale(1.01);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -43,6 +45,7 @@ html {
         opacity: 0;
         transform: translateX(-50px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -55,6 +58,7 @@ html {
         opacity: 0;
         transform: translateX(50px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -67,9 +71,11 @@ html {
         opacity: 0;
         transform: scale(0.8);
     }
+
     50% {
         transform: scale(1.05);
     }
+
     100% {
         opacity: 1;
         transform: scale(1);
@@ -78,15 +84,20 @@ html {
 
 /* Floating animation - enhanced with rotation */
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) rotate(0deg);
     }
+
     25% {
         transform: translateY(-15px) rotate(1deg);
     }
+
     50% {
         transform: translateY(-25px) rotate(0deg);
     }
+
     75% {
         transform: translateY(-15px) rotate(-1deg);
     }
@@ -94,18 +105,23 @@ html {
 
 /* Morphing blob animation for backgrounds */
 @keyframes morphBlob {
-    0%, 100% {
+
+    0%,
+    100% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
         transform: translate(0, 0) rotate(0deg);
     }
+
     25% {
         border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
         transform: translate(5%, 5%) rotate(90deg);
     }
+
     50% {
         border-radius: 50% 60% 30% 60% / 30% 40% 70% 50%;
         transform: translate(-5%, 10%) rotate(180deg);
     }
+
     75% {
         border-radius: 60% 40% 50% 40% / 60% 50% 40% 60%;
         transform: translate(5%, -5%) rotate(270deg);
@@ -117,6 +133,7 @@ html {
     0% {
         background-position: -200% center;
     }
+
     100% {
         background-position: 200% center;
     }
@@ -124,9 +141,12 @@ html {
 
 /* Glow pulse animation */
 @keyframes glowPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.4));
     }
+
     50% {
         filter: drop-shadow(0 0 40px rgba(118, 75, 162, 0.6));
     }
@@ -134,10 +154,13 @@ html {
 
 /* Subtle breathing animation */
 @keyframes breathe {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
         opacity: 0.2;
     }
+
     50% {
         transform: scale(1.1);
         opacity: 0.3;
@@ -149,6 +172,7 @@ html {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -156,12 +180,19 @@ html {
 
 /* Bounce animation */
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0);
     }
+
     40% {
         transform: translateY(-20px);
     }
+
     60% {
         transform: translateY(-10px);
     }
@@ -169,12 +200,16 @@ html {
 
 /* Wiggle animation for attention */
 @keyframes wiggle {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: rotate(0deg);
     }
+
     25% {
         transform: rotate(-3deg);
     }
+
     75% {
         transform: rotate(3deg);
     }
@@ -187,6 +222,7 @@ html {
         transform: translateY(60px);
         filter: blur(10px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -235,14 +271,37 @@ html {
 }
 
 /* Staggered animation delays */
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
-.delay-500 { animation-delay: 500ms; }
-.delay-600 { animation-delay: 600ms; }
-.delay-700 { animation-delay: 700ms; }
-.delay-800 { animation-delay: 800ms; }
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+.delay-400 {
+    animation-delay: 400ms;
+}
+
+.delay-500 {
+    animation-delay: 500ms;
+}
+
+.delay-600 {
+    animation-delay: 600ms;
+}
+
+.delay-700 {
+    animation-delay: 700ms;
+}
+
+.delay-800 {
+    animation-delay: 800ms;
+}
 
 /* Start invisible for staggered animations */
 .stagger-item {
@@ -255,14 +314,12 @@ html {
    ======================================== */
 
 .gradient-text {
-    background: linear-gradient(
-        135deg, 
-        #667eea 0%, 
-        #764ba2 25%, 
-        #667eea 50%, 
-        #764ba2 75%,
-        #667eea 100%
-    );
+    background: linear-gradient(135deg,
+            #667eea 0%,
+            #764ba2 25%,
+            #667eea 50%,
+            #764ba2 75%,
+            #667eea 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -281,7 +338,7 @@ html {
 
 .card-hover:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 
+    box-shadow:
         0 25px 50px -12px rgba(0, 0, 0, 0.15),
         0 0 30px rgba(99, 102, 241, 0.1);
 }
@@ -526,14 +583,66 @@ section {
    ======================================== */
 
 .loading-skeleton {
-    background: linear-gradient(
-        90deg,
-        #f1f5f9 0%,
-        #e2e8f0 50%,
-        #f1f5f9 100%
-    );
+    background: linear-gradient(90deg,
+            #f1f5f9 0%,
+            #e2e8f0 50%,
+            #f1f5f9 100%);
     background-size: 200% 100%;
     animation: shimmer 1.5s infinite;
+}
+
+/* ========================================
+   PROFILE PHOTO ANIMATIONS
+   ======================================== */
+
+/* Slow rotation for gradient border */
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 8s linear infinite;
+}
+
+/* Profile container with perspective for 3D effect */
+.profile-container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+/* Profile image wrapper with hover tilt */
+.profile-image-wrapper {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.profile-container:hover .profile-image-wrapper {
+    transform: translateY(-10px) rotateY(5deg) rotateX(-5deg) scale(1.02);
+}
+
+/* Profile image with enhanced shadow on hover */
+.profile-image {
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: box-shadow, transform;
+}
+
+.profile-container:hover .profile-image {
+    box-shadow:
+        0 30px 60px -12px rgba(79, 70, 229, 0.4),
+        0 18px 36px -18px rgba(139, 92, 246, 0.3),
+        0 0 0 6px rgba(255, 255, 255, 0.9);
+}
+
+/* Pause floating animation on hover for better interaction */
+.profile-container:hover .animate-float {
+    animation-play-state: paused;
 }
 
 /* ========================================
@@ -541,6 +650,7 @@ section {
    ======================================== */
 
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
