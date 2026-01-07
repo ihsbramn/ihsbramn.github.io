@@ -4,36 +4,89 @@ class CustomFooter extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         footer {
-          background: #1e293b;
-          color: #94a3b8;
-          padding: 3rem 1.5rem;
-          text-align: center;
+          background: #000000;
+          color: #ffffff;
+          padding: 10rem 4rem 4rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          overflow: hidden;
+        }
+        .footer-name {
+          font-family: 'Outfit', sans-serif;
+          font-size: clamp(5rem, 25vw, 25rem);
+          font-weight: 800;
+          line-height: 0.8;
+          text-transform: uppercase;
+          letter-spacing: -0.05em;
+          margin-bottom: 4rem;
+          opacity: 0.1;
+          user-select: none;
+          transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.8s ease, color 0.8s ease;
+        }
+        footer:hover .footer-name {
+          opacity: 0.15;
+          transform: translateY(-20px);
+          color: var(--accent, #4f46e5);
+        }
+        .footer-content {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          z-index: 1;
         }
         .social-links {
           display: flex;
-          justify-content: center;
-          gap: 1.5rem;
-          margin-bottom: 1.5rem;
+          gap: 2rem;
         }
         .social-links a {
-          color: #e2e8f0;
+          color: #ffffff;
           text-decoration: none;
-          transition: color 0.2s;
+          font-family: 'Inter', sans-serif;
+          font-weight: 500;
+          text-transform: lowercase;
+          position: relative;
+          padding: 0.5rem 0;
+          transition: color 0.3s ease;
+        }
+        .social-links a::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 1.5px;
+          background-color: white;
+          transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .social-links a:hover::after {
+          width: 100%;
         }
         .social-links a:hover {
-          color: #6366f1;
+          color: rgba(255, 255, 255, 0.8);
         }
         .copyright {
-          font-size: 0.875rem;
+          font-family: 'Inter', sans-serif;
+          font-size: 0.8rem;
+          opacity: 0.5;
+        }
+        @media (max-width: 768px) {
+          footer { padding: 6rem 2rem 2rem; }
+          .footer-content { flex-direction: column; align-items: center; gap: 2rem; text-align: center; }
         }
       </style>
       <footer>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/ihsbramn/" target="_blank">LinkedIn</a>
-          <a href="mailto:ihsbramn.work@gmail.com">Email</a>
-          <a href="https://github.com/ihsbramn" target="_blank">GitHub</a>
+        <div class="footer-name">IKHSAN</div>
+        <div class="footer-content">
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/ihsbramn/" target="_blank">linkedin</a>
+            <a href="mailto:ihsbramn.work@gmail.com">email</a>
+            <a href="https://github.com/ihsbramn" target="_blank">github</a>
+          </div>
+          <p class="copyright">© 2025 Ikhsan Abdurachman</p>
         </div>
-        <p class="copyright">© 2025 Ikhsan Abdurachman. All rights reserved.</p>
       </footer>
     `;
   }
