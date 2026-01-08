@@ -10,7 +10,30 @@ document.addEventListener('DOMContentLoaded', function () {
     initMarquee();
     initCardEffects();
     initGlassBlob();
+    initParallax();
 });
+
+// ========================================
+// PARALLAX EFFECT
+// ========================================
+
+function initParallax() {
+    const profileImg = document.querySelector('.profile-photo');
+    if (!profileImg) return;
+
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const rect = profileImg.parentElement.getBoundingClientRect();
+        const offset = rect.top + scrolled;
+        const speed = 0.15;
+
+        // Only calculate if visible
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            const yPos = (scrolled - offset) * speed;
+            profileImg.style.setProperty('--parallax-y', `${yPos}px`);
+        }
+    });
+}
 
 // ========================================
 // NAV THEME DYNAMICS

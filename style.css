@@ -167,7 +167,7 @@ h4,
 
 .profile-photo-container {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 5;
     border-radius: 2rem;
     overflow: hidden;
     position: relative;
@@ -176,13 +176,20 @@ h4,
 
 .profile-photo {
     width: 100%;
-    height: 100%;
+    height: 125%;
+    /* Slightly more room */
     object-fit: cover;
-    transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+    position: absolute;
+    top: -12.5%;
+    /* Center the 125% height image */
+    left: 0;
+    transform: translateY(var(--parallax-y, 0)) scale(1);
 }
 
 .profile-photo-container:hover .profile-photo {
-    transform: scale(1.1) rotate(1deg);
+    transform: translateY(var(--parallax-y, 0)) scale(1.05);
 }
 
 .bio-card {
