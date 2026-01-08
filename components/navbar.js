@@ -75,7 +75,9 @@ class CustomNavbar extends HTMLElement {
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Works</a></li>
+          <li><a href="#education">Education</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#certifications">Certified</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>

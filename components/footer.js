@@ -85,7 +85,7 @@ class CustomFooter extends HTMLElement {
             <a href="mailto:ihsbramn.work@gmail.com">email</a>
             <a href="https://github.com/ihsbramn" target="_blank">github</a>
           </div>
-          <p class="copyright">© 2025 Ikhsan Abdurachman</p>
+          <p class="copyright">© 2026 Ikhsan Abdurachman</p>
         </div>
       </footer>
     `;

@@ -299,7 +299,8 @@ section {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--accent);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
 }
 
 /* ========================================
@@ -382,6 +383,18 @@ section {
 
 .text-uppercase {
     text-transform: uppercase;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+.text-decoration-none {
+    text-decoration: none;
 }
 
 .marquee-container {
