@@ -232,7 +232,6 @@ function initGlassBlob() {
         roughness: 0.2,
         transmission: 0.9,
         ior: 1.5,
-        thickness: 2.0,
         transparent: true,
         opacity: 0.8,
         clearcoat: 1.0,

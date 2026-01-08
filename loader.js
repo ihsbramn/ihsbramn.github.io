@@ -94,7 +94,6 @@ function initLoader() {
         metalness: 0.2,
         roughness: 0.1,
         transmission: 0.95,
-        thickness: 0.5,
         clearcoat: 1.0,
         opacity: 0.9,
         transparent: true,
