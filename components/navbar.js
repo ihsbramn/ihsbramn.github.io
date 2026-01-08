@@ -151,6 +151,13 @@ class CustomNavbar extends HTMLElement {
           .menu-btn.active span:nth-child(3) { transform: rotate(45deg) translate(-5px, -5px); }
         }
 
+        /* Mobile Controls Container */
+        .mobile-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
         /* Theme Toggle */
         .theme-toggle {
             background: none;
@@ -164,8 +171,6 @@ class CustomNavbar extends HTMLElement {
             justify-content: center;
             transition: color 0.3s ease;
         }
-
-
 
         .theme-toggle svg {
             width: 20px;
@@ -185,11 +190,8 @@ class CustomNavbar extends HTMLElement {
 
         @media (max-width: 768px) {
             .theme-toggle {
-                position: absolute;
-                right: 4.5rem; /* Space between toggle and hamburger */
-                top: 50%;
-                transform: translateY(-50%); /* Center vertically */
                 margin: 0;
+                padding: 0.5rem;
             }
         }
       </style>
@@ -204,18 +206,20 @@ class CustomNavbar extends HTMLElement {
           <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <button class="theme-toggle" aria-label="Toggle Dark Mode">
-            <!-- Sun Icon (shown by default logic later) -->
-            <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-            <!-- Moon Icon (hidden initially, managed by JS) -->
-            <svg class="moon-icon" viewBox="0 0 24 24" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        </button>
+        <div class="mobile-controls">
+          <button class="theme-toggle" aria-label="Toggle Dark Mode">
+              <!-- Sun Icon (shown by default logic later) -->
+              <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+              <!-- Moon Icon (hidden initially, managed by JS) -->
+              <svg class="moon-icon" viewBox="0 0 24 24" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
 
-        <button class="menu-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+          <button class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </nav>
       <div class="mobile-menu">
         <a href="#about">about</a>
