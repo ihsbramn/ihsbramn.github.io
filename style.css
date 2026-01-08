@@ -17,8 +17,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none !important;
-    /* Custom cursor will handle this */
+}
+
+@media (min-width: 1025px) {
+    * {
+        cursor: none !important;
+    }
 }
 
 body {
@@ -43,33 +47,42 @@ h4,
 /* ========================================
    CUSTOM CURSOR
    ======================================== */
-.cursor-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--text-primary);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 10000;
-    transition: transform 0.1s ease;
-    mix-blend-mode: difference;
-}
-
+.cursor-dot,
 .cursor-outline {
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--text-primary);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.3s ease, border 0.3s ease;
+    display: none;
 }
 
-.cursor-outline.hovered {
-    transform: scale(2);
-    background-color: rgba(0, 0, 0, 0.05);
-    border: 0.5px solid rgba(0, 0, 0, 0.1);
+@media (min-width: 1025px) {
+    .cursor-dot {
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: var(--text-primary);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 10000;
+        transition: transform 0.1s ease;
+        mix-blend-mode: difference;
+    }
+
+    .cursor-outline {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--text-primary);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.3s ease, border 0.3s ease;
+    }
+
+    .cursor-outline.hovered {
+        transform: scale(2);
+        background-color: rgba(0, 0, 0, 0.05);
+        border: 0.5px solid rgba(0, 0, 0, 0.1);
+    }
 }
 
 /* ========================================
@@ -129,6 +142,14 @@ h4,
     filter: blur(80px);
     z-index: -1;
     animation: rotate 20s linear infinite;
+}
+
+@media (max-width: 768px) {
+    .fluid-shape {
+        width: 300px;
+        height: 300px;
+        filter: blur(40px);
+    }
 }
 
 /* ========================================
@@ -365,12 +386,40 @@ section {
    RESPONSIVE
    ======================================== */
 @media (max-width: 768px) {
+    section {
+        padding: 5rem 1.5rem;
+    }
+
     .hero-title {
-        font-size: 4rem;
+        font-size: clamp(3rem, 12vw, 5rem);
+    }
+
+    .section-header {
+        margin-bottom: 3rem;
+    }
+
+    .section-title.massive {
+        font-size: clamp(3rem, 15vw, 6rem);
+    }
+
+    .work-grid {
+        gap: 2rem;
     }
 
     .work-item {
-        padding: 2rem;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .work-info h3 {
+        font-size: 1.75rem;
+    }
+
+    .bio-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .bio-card p {
+        font-size: 1.1rem;
     }
 }
 
@@ -430,6 +479,12 @@ section {
 
     to {
         transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .marquee-content {
+        animation-duration: 10s;
     }
 }
 
