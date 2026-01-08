@@ -16,17 +16,16 @@ class CustomNavbar extends HTMLElement {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          mix-blend-mode: difference;
           transition: padding 0.3s ease;
         }
         .logo {
           font-family: 'Outfit', sans-serif;
           font-size: 1.5rem;
           font-weight: 800;
-          color: white;
+          color: #ffffff;
           text-decoration: none;
           letter-spacing: -0.05em;
-          transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+          transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), color 0.4s ease;
           display: inline-block;
           z-index: 1001;
         }
@@ -42,14 +41,14 @@ class CustomNavbar extends HTMLElement {
         }
         .nav-links a {
           font-family: 'Inter', sans-serif;
-          color: white;
+          color: #ffffff;
           text-decoration: none;
           font-weight: 500;
           font-size: 0.9rem;
           text-transform: lowercase;
           position: relative;
           padding: 0.5rem 0;
-          transition: color 0.3s ease;
+          transition: color 0.4s ease;
         }
         .nav-links a::after {
           content: '';
@@ -58,11 +57,23 @@ class CustomNavbar extends HTMLElement {
           left: 0;
           width: 0;
           height: 1.5px;
-          background-color: white;
-          transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+          background-color: #ffffff;
+          transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.4s ease;
         }
         .nav-links a:hover::after {
           width: 100%;
+        }
+
+        /* Light Background Context - Black Text */
+        :host(.light-background) .logo,
+        :host(.light-background) .nav-links a {
+          color: #000000;
+        }
+        :host(.light-background) .nav-links a::after {
+          background-color: #000000;
+        }
+        :host(.light-background) .menu-btn span {
+          background: #000000;
         }
         
         /* Mobile Menu Button */
@@ -70,7 +81,7 @@ class CustomNavbar extends HTMLElement {
           display: none;
           background: none;
           border: none;
-          color: white;
+          color: inherit;
           cursor: pointer;
           padding: 0.5rem;
           z-index: 1001;
@@ -79,9 +90,9 @@ class CustomNavbar extends HTMLElement {
           display: block;
           width: 25px;
           height: 2px;
-          background: white;
+          background: #ffffff;
           margin: 5px 0;
-          transition: 0.3s;
+          transition: 0.3s, background 0.4s ease;
         }
 
         /* Mobile Menu Overlay */

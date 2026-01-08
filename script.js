@@ -3,12 +3,50 @@ document.addEventListener('DOMContentLoaded', function () {
     if (typeof feather !== 'undefined') {
         feather.replace();
     }
+    initNavTheme();
     initCustomCursor();
     initMagneticEffects();
     initScrollReveal();
     initMarquee();
     initCardEffects();
 });
+
+// ========================================
+// NAV THEME DYNAMICS
+// ========================================
+
+function initNavTheme() {
+    const navbar = document.querySelector('custom-navbar');
+    if (!navbar) return;
+
+    const sections = document.querySelectorAll('section, .marquee-container, footer');
+
+    // Default: light background (black text)
+    navbar.classList.add('light-background');
+
+    const observerOptions = {
+        threshold: 0,
+        rootMargin: '-10% 0px -90% 0px' // Check if section is under top 10% of viewport
+    };
+
+    const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const isDark = entry.target.classList.contains('marquee-container') ||
+                    entry.target.tagName === 'FOOTER' ||
+                    entry.target.id === 'special-dark-section'; // Add more if needed
+
+                if (isDark) {
+                    navbar.classList.remove('light-background');
+                } else {
+                    navbar.classList.add('light-background');
+                }
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => navObserver.observe(section));
+}
 
 // ========================================
 // CUSTOM CURSOR
