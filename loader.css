@@ -1,0 +1,51 @@
+/* ========================================
+   LOADER & ENTRY ANIMATION
+   ======================================== */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100000;
+    background-color: var(--bg-primary);
+    /* Matches body bg */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    pointer-events: none;
+    /* Allows scrolling if it gets stuck, but we'll lock body */
+    transition: opacity 0.5s ease-out;
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+/* Initial "Broken" State for Hero Content */
+.hero-title .char {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(20px);
+    transform: translate3d(var(--x), var(--y), var(--z)) rotate(var(--r));
+    transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1),
+        opacity 1s ease,
+        filter 1.5s ease;
+}
+
+.hero-title.assembled .char {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0) rotate(0);
+}
+
+.hero-subtitle {
+    transition: all 1s ease;
+}
+
+.hero-subtitle.loading-state {
+    opacity: 0;
+    letter-spacing: 2rem;
+    filter: blur(10px);
+}

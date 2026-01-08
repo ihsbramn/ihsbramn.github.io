@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
     initCardEffects();
     initGlassBlob();
     initParallax();
+    initVHSEffect();
+    initLiquidScroll();
+    if (typeof initLoader === 'function') initLoader();
 });
 
 // ========================================
@@ -399,6 +402,7 @@ function initGlassBlob() {
     });
 }
 
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -414,3 +418,164 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+
+// ========================================
+// VHS DISTORTION EFFECT
+// ========================================
+
+function initVHSEffect() {
+    const heroSection = document.getElementById('about');
+    if (!heroSection) return;
+
+    const title = heroSection.querySelector('.hero-title');
+    const subtitle = heroSection.querySelector('.hero-subtitle');
+
+    if (!title) return;
+
+    let currentScroll = window.scrollY;
+    let velocity = 0;
+
+    // Performance optimization
+    title.style.willChange = 'transform, text-shadow, filter';
+    if (subtitle) subtitle.style.willChange = 'transform, text-shadow';
+
+    window.addEventListener('scroll', () => {
+        const newScroll = window.scrollY;
+
+        // Only trigger if we are somewhat near the hero section to save resources
+        // (Though hero is at top, so usually always active on start)
+        velocity += (newScroll - currentScroll);
+        currentScroll = newScroll;
+    });
+
+    function animate() {
+        // Dampen velocity to return to 0
+        velocity *= 0.85; // Lower = faster stop
+
+        if (Math.abs(velocity) < 0.1) {
+            velocity = 0;
+            // Clear styles when stopped to ensure clean look
+            if (title.style.textShadow) {
+                title.style.transform = '';
+                title.style.textShadow = '';
+                title.style.filter = '';
+                if (subtitle) {
+                    subtitle.style.transform = '';
+                    subtitle.style.textShadow = '';
+                    subtitle.style.filter = '';
+                }
+            }
+        } else {
+            // Calculate effects based on velocity
+            // Limit max effect
+            const v = Math.max(Math.min(velocity, 40), -40);
+
+            const skewX = v * 0.4;
+            const rgbOffset = v * 0.3;
+            const blurAmount = Math.abs(v) * 0.05;
+
+            const transform = `skewX(${skewX}deg)`;
+            // RGB Split: Red to left/right, Cyan to opposite
+            const shadow = `${rgbOffset}px 0 0 rgba(255,0,0,0.7), ${-rgbOffset}px 0 0 rgba(0,255,255,0.7)`;
+            const filter = `blur(${Math.min(blurAmount, 3)}px)`;
+
+            title.style.transform = transform;
+            title.style.textShadow = shadow;
+            title.style.filter = filter;
+
+            if (subtitle) {
+                // Determine subtitle effect (maybe inverse or lighter)
+                subtitle.style.transform = `skewX(${-skewX * 0.5}deg)`;
+                subtitle.style.textShadow = `${-rgbOffset * 0.5}px 0 0 rgba(255,0,0,0.7), ${rgbOffset * 0.5}px 0 0 rgba(0,255,255,0.7)`;
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+}
+
+// ========================================
+// GLOBAL LIQUID / GLASS SCROLL
+// ========================================
+
+function initLiquidScroll() {
+    const main = document.querySelector('main');
+    const edgeTop = document.querySelector('.scroll-edge-distortion.top');
+    const edgeBottom = document.querySelector('.scroll-edge-distortion.bottom');
+
+    if (!main) return;
+
+    let currentScroll = window.scrollY;
+    let velocity = 0;
+    let isScrolling = false;
+    let scrollTimeout;
+
+    window.addEventListener('scroll', () => {
+        const newScroll = window.scrollY;
+        velocity = newScroll - currentScroll;
+        currentScroll = newScroll;
+        isScrolling = true;
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            isScrolling = false;
+        }, 100);
+    });
+
+    function animate() {
+        if (isScrolling || Math.abs(velocity) > 0.1) {
+            // Decelerate
+            velocity *= 0.9;
+
+            // Limit max skew to avoid breaking layout too much
+            const skewAmount = Math.max(Math.min(velocity * 0.1, 5), -5);
+            const scaleAmount = 1 + (Math.abs(velocity) * 0.0005); // Subtle stretch
+
+            // Apply Transform to Main
+            // TranslateY helps keep the center in view when scaling/skewing
+            main.style.transform = `skewY(${skewAmount}deg) scaleY(${scaleAmount})`;
+
+            // Apply Blur to Edges based on speed
+            // Max blur 10px
+            const blurStrength = Math.min(Math.abs(velocity) * 0.5, 12);
+
+            if (blurStrength > 0.5) {
+                const blurVal = `blur(${blurStrength}px)`;
+                if (edgeTop) {
+                    edgeTop.style.backdropFilter = blurVal;
+                    // edgeTop.style.webkitBackdropFilter = blurVal; // JS style prop camelCase
+                    edgeTop.style.opacity = 1;
+                }
+                if (edgeBottom) {
+                    edgeBottom.style.backdropFilter = blurVal;
+                    // edgeBottom.style.webkitBackdropFilter = blurVal;
+                    edgeBottom.style.opacity = 1;
+                }
+            } else {
+                if (edgeTop) edgeTop.style.opacity = 0;
+                if (edgeBottom) edgeBottom.style.opacity = 0;
+            }
+
+        } else {
+            // Reset cleanly
+            if (main.style.transform && main.style.transform !== 'none') {
+                main.style.transform = 'none';
+                if (edgeTop) {
+                    edgeTop.style.opacity = 0;
+                    edgeTop.style.backdropFilter = 'none';
+                }
+                if (edgeBottom) {
+                    edgeBottom.style.opacity = 0;
+                    edgeBottom.style.backdropFilter = 'none';
+                }
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+}

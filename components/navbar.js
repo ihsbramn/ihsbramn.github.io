@@ -67,13 +67,16 @@ class CustomNavbar extends HTMLElement {
         /* Light Background Context - Black Text */
         :host(.light-background) .logo,
         :host(.light-background) .nav-links a {
-          color: #000000;
+          color: var(--nav-color-on-light, #000000);
         }
         :host(.light-background) .nav-links a::after {
-          background-color: #000000;
+          background-color: var(--nav-color-on-light, #000000);
         }
         :host(.light-background) .menu-btn span {
-          background: #000000;
+          background: var(--nav-color-on-light, #000000);
+        }
+        :host(.light-background) .theme-toggle {
+            color: var(--nav-color-on-light, #000000);
         }
         
         /* Mobile Menu Button */
@@ -147,6 +150,47 @@ class CustomNavbar extends HTMLElement {
           .menu-btn.active span:nth-child(2) { opacity: 0; }
           .menu-btn.active span:nth-child(3) { transform: rotate(45deg) translate(-5px, -5px); }
         }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #ffffff;
+            padding: 0.5rem;
+            margin-left: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.3s ease;
+        }
+
+
+
+        .theme-toggle svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                        opacity 0.3s ease;
+        }
+
+        .theme-toggle:hover svg {
+            transform: rotate(180deg);
+        }
+
+        @media (max-width: 768px) {
+            .theme-toggle {
+                position: absolute; /* Place it in header */
+                right: 4rem; /* Left of hamburger menu */
+                top: 2rem; 
+                margin: 0;
+            }
+        }
       </style>
       <nav>
         <a href="/" class="logo">IKHSAN.</a>
@@ -158,6 +202,14 @@ class CustomNavbar extends HTMLElement {
           <li><a href="#certifications">Certified</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">
+            <!-- Sun Icon (shown by default logic later) -->
+            <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <!-- Moon Icon (hidden initially, managed by JS) -->
+            <svg class="moon-icon" viewBox="0 0 24 24" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
         <button class="menu-btn">
           <span></span>
           <span></span>
@@ -190,6 +242,63 @@ class CustomNavbar extends HTMLElement {
         mobileMenu.classList.remove('active');
         document.body.style.overflow = '';
       });
+    });
+
+    // Theme Toggle Logic
+    const themeToggle = this.shadowRoot.querySelector('.theme-toggle');
+    const sunIcon = this.shadowRoot.querySelector('.sun-icon');
+    const moonIcon = this.shadowRoot.querySelector('.moon-icon');
+
+    // Check for saved theme preference or default to light mode
+    const savedTheme = localStorage.getItem('theme');
+
+    // Function to set theme with smooth animations
+    const setTheme = (isDark) => {
+      // Add transition class to document for smooth theme change
+      document.documentElement.style.setProperty('color-scheme', isDark ? 'dark' : 'light');
+
+      if (isDark) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+
+        // Animate icon transition
+        moonIcon.style.opacity = '0';
+        moonIcon.style.transform = 'scale(0.5) rotate(-90deg)';
+
+        setTimeout(() => {
+          sunIcon.style.display = 'block';
+          moonIcon.style.display = 'none';
+          requestAnimationFrame(() => {
+            sunIcon.style.opacity = '1';
+            sunIcon.style.transform = 'scale(1) rotate(0deg)';
+          });
+        }, 150);
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+
+        // Animate icon transition
+        sunIcon.style.opacity = '0';
+        sunIcon.style.transform = 'scale(0.5) rotate(90deg)';
+
+        setTimeout(() => {
+          moonIcon.style.display = 'block';
+          sunIcon.style.display = 'none';
+          requestAnimationFrame(() => {
+            moonIcon.style.opacity = '1';
+            moonIcon.style.transform = 'scale(1) rotate(0deg)';
+          });
+        }, 150);
+      }
+    };
+
+    // Initial Load - Default to light mode
+    setTheme(savedTheme === 'dark');
+
+    // Listen to click
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      setTheme(currentTheme !== 'dark');
     });
   }
 }

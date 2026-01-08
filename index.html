@@ -9,14 +9,22 @@
         content="Portfolio of Ikhsan Abdurachman, IT Solution Analyst specializing in Cloud-Native Architecture, Kubernetes, and DevSecOps.">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loader.css">
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
+    <!-- Loading Screen -->
+    <div id="loader"></div>
+
     <!-- Custom Cursor -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
+
+    <!-- Scroll Edge Distortion Overlays -->
+    <div class="scroll-edge-distortion top"></div>
+    <div class="scroll-edge-distortion bottom"></div>
 
     <!-- Navbar Component -->
     <custom-navbar></custom-navbar>
@@ -262,6 +270,7 @@
 
     <script src="components/navbar.js"></script>
     <script src="components/footer.js"></script>
+    <script src="loader.js"></script>
     <script src="script.js"></script>
 </body>
 

@@ -11,18 +11,81 @@
     --gray-100: #f3f4f6;
     --gray-200: #e5e7eb;
     --transition-smooth: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    --nav-color-on-light: #000000;
+
+    /* Theme transition timing */
+    --theme-transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #121212;
+    --text-primary: #ffffff;
+    --text-secondary: #a1a1aa;
+    --black: #ffffff;
+    /* Invert black utility for buttons */
+    --gray-100: #18181b;
+    --gray-200: #27272a;
+    --nav-color-on-light: #ffffff;
+}
+
+[data-theme="dark"] .magnetic-btn {
+    border: 1px solid var(--gray-200);
+}
+
+[data-theme="dark"] .hero-title .name {
+    /* Make name pop more in dark mode if needed, or keep accent */
+    text-shadow: 0 0 30px rgba(79, 70, 229, 0.3);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color var(--theme-transition),
+        color var(--theme-transition),
+        border-color var(--theme-transition),
+        box-shadow var(--theme-transition);
 }
 
 @media (min-width: 1025px) {
     * {
         cursor: none !important;
     }
+}
+
+/* ========================================
+   SCROLL EDGE DISTORTION
+   ======================================== */
+.scroll-edge-distortion {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 15vh;
+    z-index: 900;
+    /* Below navbar (1000) but above content */
+    pointer-events: none;
+    backdrop-filter: blur(0px);
+    transition: backdrop-filter 0.1s ease-out;
+    opacity: 0;
+}
+
+.scroll-edge-distortion.top {
+    top: 0;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+}
+
+.scroll-edge-distortion.bottom {
+    bottom: 0;
+    -webkit-mask-image: linear-gradient(to top, black 0%, transparent 100%);
+    mask-image: linear-gradient(to top, black 0%, transparent 100%);
+}
+
+main {
+    transition: transform 0.1s ease-out;
+    transform-origin: center center;
+    will-change: transform;
 }
 
 body {
@@ -32,6 +95,8 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    transition: background-color var(--theme-transition),
+        color var(--theme-transition);
 }
 
 h1,
@@ -62,7 +127,7 @@ h4,
         position: fixed;
         pointer-events: none;
         z-index: 10000;
-        transition: transform 0.1s ease;
+        transition: transform 0.1s ease, background-color var(--theme-transition);
         mix-blend-mode: difference;
     }
 
@@ -75,7 +140,10 @@ h4,
         position: fixed;
         pointer-events: none;
         z-index: 9999;
-        transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.3s ease, border 0.3s ease;
+        transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1),
+            background-color 0.3s ease,
+            border 0.3s ease,
+            border-color var(--theme-transition);
     }
 
     .cursor-outline.hovered {
@@ -103,8 +171,10 @@ h4,
 .hero-subtitle {
     font-size: 1.25rem;
     font-weight: 500;
+    font-weight: 500;
     color: var(--text-secondary);
-    margin-bottom: 0.5rem;
+    margin-bottom: -1rem;
+    /* Pull title up closer */
     letter-spacing: -0.02em;
     opacity: 0;
     transform: translateY(20px);
@@ -114,9 +184,10 @@ h4,
 .hero-title {
     font-size: clamp(3.5rem, 10vw, 8rem);
     font-weight: 800;
-    letter-spacing: -0.04em;
-    margin-bottom: 2rem;
-    line-height: 0.9;
+    font-weight: 800;
+    letter-spacing: -0.07em;
+    margin-bottom: 1rem;
+    line-height: 0.7;
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.8s forwards 0.4s;
@@ -129,6 +200,8 @@ h4,
 
 .hero-title .name {
     color: var(--accent);
+    display: block;
+    margin-top: -0.2em;
 }
 
 #canvas-container {
@@ -369,7 +442,8 @@ section {
     justify-content: center;
     padding: 1.5rem 3rem;
     background: var(--black);
-    color: white;
+    color: var(--bg-primary);
+    /* Ensures contrast: White text on Black btn (Light), Black text on White btn (Dark) */
     border-radius: 100px;
     text-decoration: none;
     font-weight: 600;
@@ -455,8 +529,9 @@ section {
     overflow: hidden;
     white-space: nowrap;
     padding: 4rem 0;
-    background: var(--black);
-    color: white;
+    background: #000000;
+    /* Always black to maintain contrast with white text */
+    color: #ffffff;
     width: 100vw;
     position: relative;
     left: 50%;
