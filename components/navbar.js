@@ -185,9 +185,10 @@ class CustomNavbar extends HTMLElement {
 
         @media (max-width: 768px) {
             .theme-toggle {
-                position: absolute; /* Place it in header */
-                right: 4rem; /* Left of hamburger menu */
-                top: 2rem; 
+                position: absolute;
+                right: 4.5rem; /* Space between toggle and hamburger */
+                top: 50%;
+                transform: translateY(-50%); /* Center vertically */
                 margin: 0;
             }
         }
