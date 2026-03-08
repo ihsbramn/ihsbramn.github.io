@@ -139,6 +139,7 @@ class CustomNavbar extends HTMLElement {
         .mobile-menu a:nth-child(4) { transition-delay: 0.5s; }
         .mobile-menu a:nth-child(5) { transition-delay: 0.6s; }
         .mobile-menu a:nth-child(6) { transition-delay: 0.7s; }
+        .mobile-menu a:nth-child(7) { transition-delay: 0.8s; }
 
         @media (max-width: 768px) {
           nav { padding: 1.5rem 2rem; }
@@ -203,6 +204,7 @@ class CustomNavbar extends HTMLElement {
           <li><a href="#education">Education</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#certifications">Certified</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
 
@@ -227,6 +229,7 @@ class CustomNavbar extends HTMLElement {
         <a href="#education">education</a>
         <a href="#skills">skills</a>
         <a href="#certifications">certified</a>
+        <a href="#projects">projects</a>
         <a href="#contact">contact</a>
       </div>
     `;
