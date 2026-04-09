@@ -596,6 +596,15 @@ function initModal() {
             if (modal) {
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden'; // Prevent scrolling
+                
+                // Refresh feather icons inside modal
+                if (typeof feather !== 'undefined') {
+                    feather.replace();
+                }
+
+                // Reset modal scroll position
+                const container = modal.querySelector('.modal-container');
+                if (container) container.scrollTop = 0;
             }
         });
     });
