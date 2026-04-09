@@ -282,8 +282,90 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Project 2: jsontestapi -->
+                <div class="work-item reveal">
+                    <div class="work-info">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+                            <span class="work-role" style="margin-bottom: 0;">Utility API</span>
+                        </div>
+                        <h3>jsontestapi</h3>
+                        <p class="text-secondary mt-4">
+                            A lightweight, static JSON API for testing and prototyping. 
+                            Provides various endpoints like posts, comments, users, and todos to simulate a real backend.
+                            Perfect for frontend developers who need quick placeholder data.
+                        </p>
+                        <div class="mt-8" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="https://github.com/ihsbramn/ihsbramn.github.io/tree/main/jsontestapi" target="_blank" class="magnetic-btn">
+                                <i data-feather="github" style="width: 18px; height: 18px; margin-right: 10px;"></i>
+                                Source
+                            </a>
+                            <button class="magnetic-btn open-modal" data-modal="api-docs-modal">
+                                <i data-feather="file-text" style="width: 18px; height: 18px; margin-right: 10px;"></i>
+                                API Docs
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- API Docs Modal -->
+        <div id="api-docs-modal" class="modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h2>📚 API Documentation</h2>
+                    <button class="close-modal"><i data-feather="x"></i></button>
+                </div>
+                <div class="modal-content">
+                    <p>This is a static version of the JSON Test API. All data is read-only.</p>
+                    
+                    <div class="doc-section">
+                        <h3>📦 Available Resources</h3>
+                        <div class="endpoint-grid">
+                            <div class="endpoint-item">
+                                <code>GET /jsontestapi/api/posts.json</code>
+                                <p>Returns items for blog posts.</p>
+                            </div>
+                            <div class="endpoint-item">
+                                <code>GET /jsontestapi/api/comments.json</code>
+                                <p>Returns comments on posts.</p>
+                            </div>
+                            <div class="endpoint-item">
+                                <code>GET /jsontestapi/api/albums.json</code>
+                                <p>Returns photo albums.</p>
+                            </div>
+                            <div class="endpoint-item">
+                                <code>GET /jsontestapi/api/photos.json</code>
+                                <p>Returns array of photos.</p>
+                            </div>
+                            <div class="endpoint-item">
+                                <code>GET /jsontestapi/api/todos.json</code>
+                                <p>Returns todo items.</p>
+                            </div>
+                            <div class="endpoint-item">
+                                <code>GET /jsontestapi/api/users.json</code>
+                                <p>Returns list of users.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="doc-section">
+                        <h3>🚀 Usage Examples</h3>
+                        <div class="code-block">
+                            <pre><code>fetch('https://ihsbramn.github.io/jsontestapi/api/posts.json')
+  .then(response => response.json())
+  .then(posts => console.log(posts));</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="doc-section">
+                        <p class="note"><strong>Note:</strong> This is a static, read-only version. For full CRUD operations, use the self-hosted Node.js version.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Contact -->
         <section id="contact">

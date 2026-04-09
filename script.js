@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initParallax();
     initVHSEffect();
     initLiquidScroll();
+    initModal();
     if (typeof initLoader === 'function') initLoader();
 });
 
@@ -577,4 +578,48 @@ function initLiquidScroll() {
     }
 
     animate();
+}
+
+// ========================================
+// MODAL SYSTEM
+// ========================================
+
+function initModal() {
+    const openBtns = document.querySelectorAll('.open-modal');
+    const closeBtns = document.querySelectorAll('.close-modal');
+    const overlays = document.querySelectorAll('.modal-overlay');
+
+    openBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const modalId = btn.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            }
+        });
+    });
+
+    const closeModal = () => {
+        const activeModals = document.querySelectorAll('.modal.active');
+        activeModals.forEach(modal => {
+            modal.classList.remove('active');
+        });
+        document.body.style.overflow = ''; // Restore scrolling
+    };
+
+    closeBtns.forEach(btn => {
+        btn.addEventListener('click', closeModal);
+    });
+
+    overlays.forEach(overlay => {
+        overlay.addEventListener('click', closeModal);
+    });
+
+    // Close on Escape key
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
 }
