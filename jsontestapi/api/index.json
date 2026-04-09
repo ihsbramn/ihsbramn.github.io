@@ -1,0 +1,12 @@
+{
+  "message": "JSON Test API - Static Data",
+  "resources": [
+    "/api/posts.json",
+    "/api/comments.json",
+    "/api/albums.json",
+    "/api/photos.json",
+    "/api/todos.json",
+    "/api/users.json"
+  ],
+  "generated": "2026-04-09T09:42:12.422Z"
+}

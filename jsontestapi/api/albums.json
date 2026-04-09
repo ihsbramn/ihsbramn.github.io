@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "Album 1",
+    "userId": 1
+  },
+  {
+    "id": 2,
+    "title": "Album 2",
+    "userId": 1
+  },
+  {
+    "id": 3,
+    "title": "Album 3",
+    "userId": 2
+  },
+  {
+    "id": 4,
+    "title": "Album 4",
+    "userId": 2
+  },
+  {
+    "id": 5,
+    "title": "Album 5",
+    "userId": 3
+  },
+  {
+    "id": 6,
+    "title": "Album 6",
+    "userId": 3
+  },
+  {
+    "id": 7,
+    "title": "Album 7",
+    "userId": 4
+  },
+  {
+    "id": 8,
+    "title": "Album 8",
+    "userId": 4
+  },
+  {
+    "id": 9,
+    "title": "Album 9",
+    "userId": 5
+  },
+  {
+    "id": 10,
+    "title": "Album 10",
+    "userId": 5
+  }
+]

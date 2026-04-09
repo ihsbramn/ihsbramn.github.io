@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "postId": 1,
+    "name": "John Doe",
+    "email": "john@example.com",
+    "body": "Great post!"
+  },
+  {
+    "id": 2,
+    "postId": 1,
+    "name": "Jane Smith",
+    "email": "jane@example.com",
+    "body": "I agree"
+  },
+  {
+    "id": 3,
+    "postId": 2,
+    "name": "Alice Brown",
+    "email": "alice@example.com",
+    "body": "Nice work"
+  },
+  {
+    "id": 4,
+    "postId": 2,
+    "name": "Bob White",
+    "email": "bob@example.com",
+    "body": "Thanks for sharing"
+  },
+  {
+    "id": 5,
+    "postId": 3,
+    "name": "Charlie Green",
+    "email": "charlie@example.com",
+    "body": "Interesting thoughts"
+  },
+  {
+    "id": 6,
+    "postId": 3,
+    "name": "Diana Blue",
+    "email": "diana@example.com",
+    "body": "Could you elaborate?"
+  },
+  {
+    "id": 7,
+    "postId": 4,
+    "name": "Eve Black",
+    "email": "eve@example.com",
+    "body": "Looking forward to more"
+  },
+  {
+    "id": 8,
+    "postId": 4,
+    "name": "Frank Gray",
+    "email": "frank@example.com",
+    "body": "Well written"
+  },
+  {
+    "id": 9,
+    "postId": 5,
+    "name": "Grace Yellow",
+    "email": "grace@example.com",
+    "body": "Helpful content"
+  },
+  {
+    "id": 10,
+    "postId": 5,
+    "name": "Henry Red",
+    "email": "henry@example.com",
+    "body": "Good job"
+  }
+]

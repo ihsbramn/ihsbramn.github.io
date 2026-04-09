@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "albumId": 1,
+    "title": "Photo 1",
+    "url": "https://via.placeholder.com/600/92c952",
+    "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+  },
+  {
+    "id": 2,
+    "albumId": 1,
+    "title": "Photo 2",
+    "url": "https://via.placeholder.com/600/771796",
+    "thumbnailUrl": "https://via.placeholder.com/150/771796"
+  },
+  {
+    "id": 3,
+    "albumId": 2,
+    "title": "Photo 3",
+    "url": "https://via.placeholder.com/600/24f355",
+    "thumbnailUrl": "https://via.placeholder.com/150/24f355"
+  },
+  {
+    "id": 4,
+    "albumId": 2,
+    "title": "Photo 4",
+    "url": "https://via.placeholder.com/600/d32776",
+    "thumbnailUrl": "https://via.placeholder.com/150/d32776"
+  },
+  {
+    "id": 5,
+    "albumId": 3,
+    "title": "Photo 5",
+    "url": "https://via.placeholder.com/600/f66b97",
+    "thumbnailUrl": "https://via.placeholder.com/150/f66b97"
+  },
+  {
+    "id": 6,
+    "albumId": 3,
+    "title": "Photo 6",
+    "url": "https://via.placeholder.com/600/56a8c2",
+    "thumbnailUrl": "https://via.placeholder.com/150/56a8c2"
+  },
+  {
+    "id": 7,
+    "albumId": 4,
+    "title": "Photo 7",
+    "url": "https://via.placeholder.com/600/b0f7cc",
+    "thumbnailUrl": "https://via.placeholder.com/150/b0f7cc"
+  },
+  {
+    "id": 8,
+    "albumId": 4,
+    "title": "Photo 8",
+    "url": "https://via.placeholder.com/600/54176f",
+    "thumbnailUrl": "https://via.placeholder.com/150/54176f"
+  },
+  {
+    "id": 9,
+    "albumId": 5,
+    "title": "Photo 9",
+    "url": "https://via.placeholder.com/600/810b14",
+    "thumbnailUrl": "https://via.placeholder.com/150/810b14"
+  },
+  {
+    "id": 10,
+    "albumId": 5,
+    "title": "Photo 10",
+    "url": "https://via.placeholder.com/600/1ee8a4",
+    "thumbnailUrl": "https://via.placeholder.com/150/1ee8a4"
+  }
+]
