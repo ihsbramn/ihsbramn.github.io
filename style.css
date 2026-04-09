@@ -834,3 +834,30 @@ section {
         padding: 1rem;
     }
 }
+
+/* Custom Scrollbar for Modal to prevent 'weird' clipping with rounded corners */
+.modal-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.modal-container::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 1.5rem 0; /* Keeps scrollbar away from the rounded corner edges */
+}
+
+.modal-container::-webkit-scrollbar-thumb {
+    background: var(--gray-200);
+    border: 4px solid var(--bg-secondary); /* Creates the floating effect */
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.modal-container::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* Modern Firefox scrollbar support */
+.modal-container {
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-200) transparent;
+}
